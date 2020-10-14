@@ -13,8 +13,7 @@ channelを割り振ることができるプラグイン
 * pluginsフォルダにPizzaTimeBungee.jarを入れる
 * 起動する
 * PizzaTimeBungeeとその中にconfig.ymlが生成されているので任意で書き換える
-config.yml
-```bash
+```yaml
 servers:
   lobby: #BungeeCordで設定しているサーバー名
     channel: ChatChannelName #LunaChatで使用するチャンネル名
@@ -27,7 +26,8 @@ servers:
 
 ## License
 
-
+https://github.com/Be4rJP/PizzaTimeBungee/blob/master/LICENSE
 
 ## Download jar file
 
+https://github.com/Be4rJP/PizzaTimeBungee/releases/tag/1.0.0
