@@ -1,7 +1,6 @@
 # PizzaTimeBungee
 
-LunaChatをBungeeCord側に入れた時にプレイヤーのいるサーバーによって自動的に
-channelを割り振ることができるプラグイン
+LunaChatをBungeeCord側に入れた時にプレイヤーのいるサーバーによって自動的にchannelを割り振ることができるプラグイン
 
 ## Requirement
 
