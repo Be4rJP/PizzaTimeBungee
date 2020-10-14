@@ -1,0 +1,19 @@
+name: PizzaTimeBungee
+version: ${project.version}
+main: be4rjp.pizzatimebungee.Main
+
+depend: [LunaChat]
+
+#-------------------------------------------------------------------------------
+
+commands:
+  pt:
+    description: For admin.
+    usage: '[§6PizzaTime§r] §bType §6/pt help §bfor help.'
+    permission-message: §cYou don't have permission.
+
+#-------------------------------------------------------------------------------
+
+permissions:
+  pt.admin:
+    description: pt command.

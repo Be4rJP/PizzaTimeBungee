@@ -1,0 +1,5 @@
+servers:
+  lobby: #BungeeCordで設定しているサーバー名
+    channel: ChatChannelName #LunaChatで使用するチャンネル名
+  other:
+    channel: OtherChatChannelName
