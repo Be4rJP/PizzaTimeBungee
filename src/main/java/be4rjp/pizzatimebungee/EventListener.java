@@ -66,9 +66,9 @@ public class EventListener implements Listener {
                     }
 
                     //設定になければdefault channelに参加させる
-                    String channelName = Config.getConfiguration().getString(
-                            Config.getConfiguration().getString("default-channel").equalsIgnoreCase("")
-                            ? LunaChatBungee.getInstance().getConfig().getGlobalChannel() : "default-channel");
+                    String channelName = Config.getConfiguration().getString("default-channel").equalsIgnoreCase("")
+                            ? LunaChatBungee.getInstance().getConfig().getGlobalChannel()
+                            : Config.getConfiguration().getString("default-channel");
                     Channel channel = api.getChannel(channelName);
                     if(channel != null) {
                         if (channel.getMembers().contains(member)) {
