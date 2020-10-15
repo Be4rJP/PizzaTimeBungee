@@ -9,8 +9,8 @@ LunaChatをBungeeCord側に入れた時にプレイヤーのいるサーバー�
 
 ## How to use
 
-* pluginsフォルダにPizzaTimeBungee.jarを入れる
-* 起動する
+* BungeeCordのpluginsフォルダにPizzaTimeBungee.jarを入れる
+* BungeeCordを起動する
 * PizzaTimeBungeeフォルダとその中にconfig.ymlが生成されているので任意で書き換える
 ```yaml
 servers:
@@ -27,7 +27,7 @@ default-channel: null
 
 ※初回起動時にデフォルト設定のチャンネルが作成されるので、それを防ぎたい場合は先にファイルを作成して書き換えてください。
 
-##Command
+## Command
 ```
 /pt reload
 ```
@@ -43,6 +43,6 @@ pt.admin
 
 https://github.com/Be4rJP/PizzaTimeBungee/blob/master/LICENSE
 
-## Download jar file
+## Download
 
-https://github.com/Be4rJP/PizzaTimeBungee/releases/tag/1.0.0
+https://github.com/Be4rJP/PizzaTimeBungee/releases
