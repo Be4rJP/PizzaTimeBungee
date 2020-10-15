@@ -58,6 +58,15 @@ public class pt extends Command {
                             Channel channel = api.getChannel(channelName);
                             channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
                         }
+
+                        if(!Config.getConfiguration().getString("default-channel").equalsIgnoreCase("")) {
+                            //Create default channel
+                            String channelName = Config.getConfiguration().getString("default-channel");
+                            if (!api.isExistChannel(channelName))
+                                api.createChannel(channelName);
+                            Channel channel = api.getChannel(channelName);
+                            channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
+                        }
     
                         TextComponent message = new TextComponent("The configuration was successfully reloaded!");
                         message.setColor(ChatColor.GREEN);

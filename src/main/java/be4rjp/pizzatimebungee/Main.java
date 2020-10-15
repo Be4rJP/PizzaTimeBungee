@@ -26,17 +26,17 @@ public final class Main extends Plugin {
     public void onEnable() {
         // Plugin startup logic
         getLogger().info("Starting up PizzaTime...");
-        
+
         plugin = this;
-    
+
         PluginManager pm = getProxy().getPluginManager();
         pm.registerListener(this, new EventListener());
-        
-        
+
+
         getLogger().info("Loading config files...");
-        
+
         Config.LoadConfig();
-        
+
         //Create channel
         LunaChatAPI api = LunaChatBungee.getInstance().getLunaChatAPI();
         for(String server : Config.getConfiguration().getSection("servers").getKeys()) {
@@ -46,12 +46,15 @@ public final class Main extends Plugin {
             Channel channel = api.getChannel(channelName);
             channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
         }
-    
-        //Create default channel
-        if(!api.isExistChannel("default"))
-            api.createChannel("default");
-        Channel channel = api.getChannel("default");
-        channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
+
+        if(!Config.getConfiguration().getString("default-channel").equalsIgnoreCase("")) {
+            //Create default channel
+            String channelName = Config.getConfiguration().getString("default-channel");
+            if (!api.isExistChannel(channelName))
+                api.createChannel(channelName);
+            Channel channel = api.getChannel(channelName);
+            channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
+        }
         
         //setup command
         getProxy().getPluginManager().registerCommand(this, new pt());

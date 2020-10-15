@@ -1,5 +1,9 @@
 servers:
   lobby: #BungeeCordで設定しているサーバー名
-    channel: ChatChannelName #LunaChatで使用するチャンネル名
+    channel: 'ChatChannelName' #LunaChatで使用するチャンネル名
   other:
-    channel: OtherChatChannelName
+    channel: 'OtherChatChannelName'
+
+#上記以外のサーバーであるときに参加させるチャンネル
+#nullを指定するとLunaChatで指定されているグローバルチャンネルに参加させます
+default-channel: null
