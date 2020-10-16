@@ -22,6 +22,10 @@ servers:
 #上記以外のサーバーであるときに参加させるチャンネル
 #nullを指定するとLunaChatで指定されているグローバルチャンネルに参加させます
 default-channel: null
+
+#チャンネルを更新するときにメッセージフォーマットも更新するかどうかの設定
+#true推奨
+format-update: true
 ```
 * /pt reloadで設定を再ロードする
 

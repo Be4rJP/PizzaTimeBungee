@@ -44,7 +44,8 @@ public final class Main extends Plugin {
             if(!api.isExistChannel(channelName))
                 api.createChannel(channelName);
             Channel channel = api.getChannel(channelName);
-            channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
+            if(Config.getConfiguration().getBoolean("format-update"))
+                channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
         }
 
         if(!Config.getConfiguration().getString("default-channel").equalsIgnoreCase("")) {
@@ -53,7 +54,8 @@ public final class Main extends Plugin {
             if (!api.isExistChannel(channelName))
                 api.createChannel(channelName);
             Channel channel = api.getChannel(channelName);
-            channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
+            if(Config.getConfiguration().getBoolean("format-update"))
+                channel.setFormat(LunaChatBungee.getInstance().getConfig().getDefaultFormat());
         }
         
         //setup command
